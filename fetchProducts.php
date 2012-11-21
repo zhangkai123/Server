@@ -10,7 +10,7 @@
     // Connect to database server
     
     $cid = $_POST['catId'];
-    $pageNum = $_GET['pageNumber'];
+    $pageNum = $_POST['pageNumber'];
 
     $hd = mysql_connect("localhost", $user, $password)
 
@@ -26,7 +26,8 @@
     mysql_query("SET CHARACTER SET utf8", $hd);
     mysql_query("SET NAMES 'utf8'", $hd);
 
-    $res = mysql_query("SELECT item_key,title,img,simg,bimg,price,url,likes,haves FROM pp_items where cid=$cid")
+    $startNum = ($pageNum - 1) * 20;
+    $res = mysql_query("SELECT item_key,title,img,simg,bimg,price,url,likes,haves FROM pp_items where cid=$cid LIMIT $startNum,20")
 
           or die ("Unable to select :-(");
 	
