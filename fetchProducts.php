@@ -28,7 +28,7 @@
 
     $startNum = ($pageNum - 1) * 20;
     
-    $res = mysql_query("SELECT item_key,title,img,simg,bimg,price,url,likes,haves FROM pp_items where cid=$cid LIMIT $startNum,20")
+    $res = mysql_query("SELECT item_key,title,img,simg,bimg,price,url,likes,haves FROM pp_items where cid=$cid ORDER BY `pp_items`.`last_time` DESC LIMIT $startNum,20")
     
     or die ("Unable to select :-(");
 	
