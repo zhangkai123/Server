@@ -232,7 +232,9 @@ class items_collectAction extends baseAction
         $req->setKeyword($keywords);
         $req->setPageNo($p);
         $req->setPageSize(40);
+        $req->setCid("50010788");
         $req->setIsMobile("true");
+        $req->setMallItem("true");
         $resp = $tb_top->execute($req);
         $goods_list = (array)$resp->taobaoke_items;
         //print_r($goods_list);exit;
