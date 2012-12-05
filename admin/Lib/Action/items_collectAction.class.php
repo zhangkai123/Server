@@ -234,7 +234,7 @@ class items_collectAction extends baseAction
         $req->setPageSize(40);
         $req->setCid("50010788");
         $req->setIsMobile("true");
-        $req->setMallItem("true");
+        $req->setSort("commissionNum_desc");
         $resp = $tb_top->execute($req);
         $goods_list = (array)$resp->taobaoke_items;
         //print_r($goods_list);exit;
