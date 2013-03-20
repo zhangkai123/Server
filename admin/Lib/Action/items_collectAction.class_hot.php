@@ -229,12 +229,12 @@ class items_collectAction extends baseAction
         $req = $tb_top->load_api('TaobaokeItemsGetRequest');
         $req->setFields("num_iid,title,nick,pic_url,price,click_url,shop_click_url,seller_credit_score,item_location,volume");
         $req->setPid($this->setting['taobao_pid']);
-        $req->setKeyword($keywords);
+        //$req->setKeyword($keywords);
         $req->setPageNo($p);
         $req->setPageSize(40);
         $req->setCid("50010788");
         $req->setIsMobile("true");
-        //$req->setMallItem("true");
+        $req->setMallItem("true");
         //$req->setStartPrice("200");
         //$req->setEndPrice("1000");
         $req->setSort("commissionNum_desc,credit_desc");

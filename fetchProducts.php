@@ -1,9 +1,9 @@
 	
 <?php
     
-	$user = "root";
-	$password = "123qwe";
-	$dbname = "myPinphp";
+	$user = "zhangkai";
+	$password = "zhangkai176776005";
+	$dbname = "pinphp";
 	
 //    header('Content-Type: application/json; charset=utf-8');
     
